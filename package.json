@@ -1,5 +1,5 @@
 {
-  "homepage": "https://ngagua.github.io/rock-paper-scissors",
+  "homepage": "https://ngagua.github.io/rock-paper-scissors/",
   "name": "rock-paper-scissors",
   "private": true,
   "version": "0.0.0",
@@ -10,7 +10,7 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "react": "^19.0.0",
