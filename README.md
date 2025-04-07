@@ -36,7 +36,7 @@ A classic Rock Paper Scissors game built using **React**, featuring:
 ---
 
 ## 📁 Project Structure
-
+```text
 src/
 │
 ├── App.tsx              # Main game logic & state
@@ -52,7 +52,7 @@ src/
 └── utils/
 └── gameLogic.ts       # Game logic helpers (getWinner, etc.)
 ---
-
+```
 ## 🛠️ Getting Started
 
 ### 1. Clone the repository
