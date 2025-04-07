@@ -10,6 +10,7 @@ A classic Rock Paper Scissors game built using **React**, featuring:
 - Image-based buttons
 
 ## 🖼️ Demo
+You can play [HERE](https://ngagua.github.io/rock-paper-scissors/)
 
 ![image](https://github.com/user-attachments/assets/3f958b1a-eff7-469c-b52c-c9c4ce9e48c9)
 ![image](https://github.com/user-attachments/assets/a36015a2-e437-445f-bfb0-b38789d86e4e)
