@@ -21,7 +21,7 @@ A classic Rock Paper Scissors game built using **React**, featuring:
 - 🎮 Choose rock, paper, or scissors to play
 - 💻 Computer picks a random move
 - 🧠 Game logic determines the winner
-- 🏆 First to 5 points wins the game
+- 🏆 First to 3 points wins the game
 - 🔁 Reset game button to play again
 
 ---
@@ -59,11 +59,15 @@ src/
 ```bash
 git clone https://github.com/ngagua/rock-paper-scissors.git
 cd rock-paper-scissors
+```
 
+---
 ### 2. Install dependencies
 ```bash
 pnpm install
+```
 
 ### 3. Start the development server
 ```bash
 pnpm run dev
+```
