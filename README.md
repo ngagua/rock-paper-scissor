@@ -57,8 +57,8 @@ src/
 
 ### 1. Clone the repository
 ```bash
-git clone https://github.com/ngagua/rock-paper-scissor.git
-cd rock-paper-scissor
+git clone https://github.com/ngagua/rock-paper-scissors.git
+cd rock-paper-scissors
 
 2. Install dependencies
 pnpm install
