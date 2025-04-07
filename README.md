@@ -60,8 +60,10 @@ src/
 git clone https://github.com/ngagua/rock-paper-scissors.git
 cd rock-paper-scissors
 
-2. Install dependencies
+### 2. Install dependencies
+```bash
 pnpm install
 
-3. Start the development server
+### 3. Start the development server
+```bash
 pnpm run dev
