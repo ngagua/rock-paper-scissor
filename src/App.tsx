@@ -69,7 +69,13 @@ function App() {
 
     return isGameOver ? (
         <div>
+            <ScoreBoard score={score} />
             <GameOver winner={winner} onRestart={restartGame} />
+            <ResultDisplay
+                playerChoice={playerChoice}
+                computerChoice={computerChoice}
+                result={result}
+            />
         </div>
     ) : (
         <div className="App">
