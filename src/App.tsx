@@ -49,10 +49,13 @@ function App() {
             setResult(ResultsMessages.DRAW)
         }
 
-        if (score.player === 2 || score.computer === 2) {
-            setIsGameOver(true)
-            setWinner(score.player === 2 ? 'Player' : 'Computer')
-        }
+        setScore((prev) => {
+            if (prev.player === 3 || prev.computer === 3) {
+                setIsGameOver(true)
+                setWinner(prev.player === 3 ? 'Player' : 'Computer')
+            }
+            return prev
+        })
     }
 
     const restartGame = () => {
