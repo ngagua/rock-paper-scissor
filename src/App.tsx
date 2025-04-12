@@ -6,6 +6,7 @@ import { ResultDisplay } from './components/ResultDisplay.tsx'
 import { getRandomChoice, getWinner } from './utils/gameLogic.ts'
 import { GameOver } from './components/GameOver.tsx'
 
+// ტაიპსკრიტპის სპეციფიური კონფიგურაციისთვის იდელაური იქნება /types/*.ts
 export enum Choices {
     ROCK = 'rock',
     PAPER = 'paper',
@@ -25,7 +26,13 @@ export enum ResultsMessages {
 }
 
 function App() {
+    // კომპონენტის ყოველ რენდერზე თავიდან შექმნის მემორიში choices, ჯობია App სკოუპის გარედან აიღო
+    // მსგავსი სტატიკური კონფიგურაციისთვის /lib/config/*.ts იდეალური ადგილი იქნბება
     const choices = [Choices.ROCK, Choices.PAPER, Choices.SCISSORS]
+    // ქასთომ ჰუკისთვის იდეალური ადგილია
+    // cons {playerChoice, computerChoice,result,score,isGameOver,winner, restartGame, handleStateChange} = useGame()
+    // ერთ სტეიტში შეგიძლია გააერთიანო
+    // საჭირო სტეიტს და მეთოდებს ამოიღებ, მაგ restartGame()
     const [playerChoice, setPlayerChoice] = useState('')
     const [computerChoice, setComputerChoice] = useState('')
     const [result, setResult] = useState('')
@@ -33,6 +40,12 @@ function App() {
     const [isGameOver, setIsGameOver] = useState(false)
     const [winner, setWinner] = useState('')
 
+    /*
+        უმჯობესია ფუნცქციის დეკლარაცია გამოიყენო ვიდრე ექსპრეშენი
+        hoisting ერორს არიდებ თავიდან, ყოველ რენდერზე არ მოხდება ფუნქციის რედეკლარაცია
+        უფრო კითხვადი და გასაგებია
+        function play(){}
+    */
     const play = (playerSelection: string) => {
         const randomChoice = getRandomChoice(choices)
         setPlayerChoice(playerSelection)
@@ -54,7 +67,7 @@ function App() {
             setWinner(score.player === 2 ? 'Player' : 'Computer')
         }
     }
-
+    // აქაც ფუნქციის დეკლარაცია
     const restartGame = () => {
         setPlayerChoice('')
         setComputerChoice('')
@@ -80,5 +93,6 @@ function App() {
         </div>
     )
 }
-
+// named export ი ჯობია სადაც შეაიმპორტებ იგივე სახელით აიღებ import {App} from
+// export {App}
 export default App

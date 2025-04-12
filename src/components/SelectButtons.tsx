@@ -15,6 +15,8 @@ interface images {
 }
 
 function SelectButtons({ choices, onPlay }: SelectButtonsProps) {
+    // აქაც SelectButtons ყოველ რენდერზე ახალ ობიექტს ვქმნით
+    // მსგავსი სტატიკური კონფიგურაციისთვის /lib/config/*.ts იდეალური ადგილი იქნბება
     const images = { rock, paper, scissors }
     return (
         <div>
