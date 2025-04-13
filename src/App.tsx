@@ -26,11 +26,6 @@ function App() {
             ) : (
                 <SelectButtons choices={choices} onPlay={play} />
             )}
-            {isGameOver ? (
-                <GameOver winner={winner} onRestart={restartGame} />
-            ) : (
-                <SelectButtons choices={choices} onPlay={play} />
-            )}
             <ResultDisplay
                 playerChoice={playerChoice}
                 computerChoice={computerChoice}
