@@ -1,6 +1,6 @@
-import { Choices, Results } from '../App.tsx'
+import { Choices, Results } from '../../types/types.ts'
 
-export const getWinner = (player: string, computer: string): Results => {
+const getWinner = (player: string, computer: string): Results => {
     if (player === computer) return Results.DRAW
 
     if (
@@ -14,7 +14,9 @@ export const getWinner = (player: string, computer: string): Results => {
     return Results.COMPUTER
 }
 
-export const getRandomChoice = (choices: string[]): string => {
+const getRandomChoice = (choices: string[]): string => {
     const randomIndex = Math.floor(Math.random() * choices.length)
     return choices[randomIndex]
 }
+
+export { getWinner, getRandomChoice }

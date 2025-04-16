@@ -1,7 +1,5 @@
-import rock from '../assets/rock.png'
-import paper from '../assets/paper.png'
-import scissors from '../assets/scissors.png'
-import { Choices } from '../App.tsx'
+import { images } from '../lib/config/constants.ts'
+import { Choices } from '../types/types.ts'
 
 interface SelectButtonsProps {
     choices: Choices[]
@@ -15,7 +13,6 @@ interface images {
 }
 
 function SelectButtons({ choices, onPlay }: SelectButtonsProps) {
-    const images = { rock, paper, scissors }
     return (
         <div>
             {choices.map((choice) => (
